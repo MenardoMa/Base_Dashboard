@@ -14,6 +14,9 @@
 
     --color-border: #dad6d6;
 
+    --color-primary-base: #0b2a4b;
+    --bg-primary-base: linear-gradient(180deg, #0a2540 0%, #0d2f56 100%);
+
 }
 
 /* == RESET == */
@@ -37,7 +40,8 @@ body{
     width: 100%;
     overflow-x: hidden;
     position: relative;
-    background-color: #ebebeb;
+    /* background-color: #ebebeb; */
+    background-color: #f5f7fb;
 }
 
 a,
@@ -96,7 +100,8 @@ img{
     min-height: 100vh;
     width: 0;
     left: -100px;
-    background-color: #101213;
+    /* background-color: #101213; */
+    background: var(--bg-primary-base);
     z-index: 100;
     transition: width .3s ease, left .3s ease;
 }
@@ -154,7 +159,7 @@ img{
     position: relative;
     width: 100%;
     height: auto;
-    color: #808284;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .rows_nav .link_nav{
@@ -163,6 +168,7 @@ img{
     align-items: center;
     border-radius: 6px;
     transition: all .3s ease;
+    transform: scale(1);
 }
 
 .rows_nav .icons{
@@ -173,6 +179,8 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
 }
 
 .rows_nav .name_link{
@@ -188,14 +196,26 @@ img{
 
 .link_nav.active{
     color: var(--color-white);
-    background-color: #27282c;
-    background-color: #27282c91;
-    border: 2px solid #242628;
+    background: rgba(96, 165, 250, 0.12);
+    border: 1px solid  rgba(96, 165, 250, 0.2);
+    transition: all .3s ease;
+}
+
+.link_nav.active .icons{
+   color: #60a5fa; 
+   transition: all .3s ease;
 }
 
 .rows_nav .link_nav:hover{
-    background-color: #27282c;
+    transform: scale(.99);
+    background: rgba(96, 165, 250, 0.12);
+    transition: all .3s ease;
 } 
+
+.rows_nav .link_nav:hover .icons{
+   color: #60a5fa; 
+   transition: all .3s ease;
+}
 
 
 /* ************ HEADER ************** */
@@ -441,7 +461,7 @@ img{
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(10, 37, 64, 0.35);
     z-index: 99;
     opacity: 0;
     visibility: hidden;
@@ -471,6 +491,10 @@ img{
     transition: all .3s ease;
     opacity: 1;
     visibility: visible;
+}
+
+.hamb.visible{
+    display: none;
 }
 
 

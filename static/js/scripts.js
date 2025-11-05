@@ -6,6 +6,8 @@ const container__content = document.querySelector(".container__content");
 const header     = document.querySelector(".header");
 const overlyne   = document.querySelector(".overlyne");
 const hamb_close = document.querySelector(".hamb_close");
+const hamb = document.querySelector('.hamb');
+
 
 
 
@@ -19,9 +21,7 @@ if (!document.body.contains(header)) {
 }
 
 function Hamb(){
-    
-    let hamb = document.querySelector('.hamb');
-    
+        
     hamb.addEventListener('click', (e) => {
         e.preventDefault();
         if(sidebare.classList.contains('visible')){
@@ -30,6 +30,7 @@ function Hamb(){
         }else{
             sidebare.classList.add('visible');
             overlyne.classList.add('visible');
+            e.currentTarget.classList.add("visible")
         }
     });
 
@@ -39,6 +40,7 @@ function Hamb(){
         e.preventDefault();
         sidebare.classList.remove('visible');
         overlyne.classList.remove('visible');
+        hamb.classList.remove('visible')
     });
 
     // CLOSE NAV
@@ -47,6 +49,7 @@ function Hamb(){
         e.preventDefault();
         sidebare.classList.remove('visible');
         overlyne.classList.remove('visible');
+        hamb.classList.remove('visible');
     });
 
 
@@ -58,6 +61,7 @@ function checkScreenSize() {
     if (window.innerWidth > 768) {
        sidebare.classList.remove('visible');
        overlyne.classList.remove('visible');
+       hamb.classList.remove('visible');
     } 
 }
 
