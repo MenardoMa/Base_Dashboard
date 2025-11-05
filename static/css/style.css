@@ -214,7 +214,7 @@ img{
     height: 100%;
     width: 100%;
     padding-inline: .6rem;
-    /* background-color: blue; */
+    background-color: blue;
     display: flex;
     align-items: center;
 }
@@ -336,6 +336,7 @@ img{
 .container__content,
 .navbar{
     max-width: 1300px;
+    max-width: 1540px;
     margin: 0 auto;
 }
 
@@ -347,6 +348,12 @@ img{
 
 .container__header.container_flop{
     padding-inline: 1rem;
+}
+
+.container.container_flop,
+.container__header.container_flop{
+    width: 90%;
+    margin: 0 auto;
 }
 
 @media (min-width: 768px){
