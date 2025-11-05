@@ -223,8 +223,8 @@ img{
 
 .hamb{
     position: relative;
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -241,7 +241,7 @@ img{
 
 .hamb .bare{
     position: relative;
-    width: 22px;
+    width: 20px;
     height: 3px;
     border-radius: 8px;
     background-color: #303030;
@@ -253,7 +253,7 @@ img{
     position: absolute;
     top: 0;
     left: 0;
-    width: 22px;
+    width: 20px;
     height: 3px;
     border-radius: 8px;
     background-color: #303030;
@@ -261,8 +261,11 @@ img{
 }
 
 .hamb .bare::after{
+    width: 17px;
     transform: translateY(-6px);
 }
+
+
 
 /* CARD GRID */
 
@@ -375,7 +378,7 @@ img{
 
 /* CAS OU ON A PAS DE HEADER La Hauteur de PADDING */
 .container__content.reset_h{
-     padding-top: 40px;
+    padding-top: 40px;
 }   
 
 .container__content,
@@ -400,6 +403,27 @@ img{
     width: 90%;
     margin: 0 auto;
 }
+
+/* AU CLICK SUR HAMB */
+
+ .sidebare.visible{
+    width: 280px;
+    left: 0;
+}
+
+.sidebare.visible .container__sidebare{
+    padding: 1rem 1rem;
+}
+
+.sidebare.visible .rows_nav .icons{
+    height: 40px;
+    width: 40px;
+}
+
+.sidebare.visible .rows_nav .name_link{
+    display: block;  
+}  
+
 
 @media (min-width: 768px){
     .sidebare{
@@ -506,3 +530,4 @@ img{
 .btn-circle:hover{
     transform: scale(.9);
 }
+

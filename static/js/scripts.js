@@ -15,3 +15,30 @@ if (!document.body.contains(sidebare)) {
 if (!document.body.contains(header)) {
     container__content.classList.add('reset_h');
 }
+
+function Hamb(){
+    
+    let hamb = document.querySelector('.hamb');
+    
+    hamb.addEventListener('click', (e) => {
+        e.preventDefault();
+        if(sidebare.classList.contains('visible')){
+            sidebare.classList.remove('visible');
+        }else{
+            sidebare.classList.add('visible')
+        }
+    });
+
+}
+
+Hamb()
+
+function checkScreenSize() {
+    if (window.innerWidth > 768) {
+       sidebare.classList.remove('visible');
+    } 
+}
+
+checkScreenSize();
+
+window.addEventListener("resize", checkScreenSize);
