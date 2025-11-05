@@ -406,7 +406,7 @@ img{
 
 /* AU CLICK SUR HAMB */
 
- .sidebare.visible{
+.sidebare.visible{
     width: 280px;
     left: 0;
 }
@@ -432,7 +432,11 @@ img{
     }
 
     .sidebare .container__sidebare{
-        padding: 1rem .2rem;
+        padding: 1rem .4rem;
+    }
+
+    .nav__header{
+        display: none;
     }
 
     /* MAIN CONTAINER */
@@ -454,6 +458,8 @@ img{
 
 }
 
+
+
 @media (min-width: 1024px){
     .sidebare{
         width: 280px;
@@ -462,6 +468,10 @@ img{
 
     .sidebare .container__sidebare{
         padding: 1rem 1rem;
+    }
+
+    .nav__header{
+        display: block;
     }
 
     .rows_nav .icons{
