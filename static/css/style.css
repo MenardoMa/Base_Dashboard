@@ -122,11 +122,19 @@ img{
     flex-direction: column;
     gap: 2rem;
     /* border: 1px solid yellow; */
+    justify-content: space-between;
 }
 
 .rows_nav{
     position: relative;
     /* border: 1px solid red; */
+}
+
+.header_rows{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: yellow; */
 }
 
 .rows_nav:last-child{
@@ -199,7 +207,7 @@ img{
     width: 100%;
     height: 60px;
     z-index: 99;
-    background-color: red;
+    /* background-color: red; */
     background-color: #FFFF;
 }
 
@@ -221,6 +229,8 @@ img{
     cursor: pointer;
 }
 
+
+.hamb_close,
 .hamb{
     position: relative;
     height: 35px;
@@ -232,6 +242,25 @@ img{
     background-color: #eeeeee;
     transition: all .3s ease;
     z-index: 1000;
+}
+
+.hamb_close{
+    height: 35px;
+    width: 35px;
+    background-color: #ffffff1a;
+    color: #808284;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.hamb_close:hover{
+    transform: scale(.9);
+    transition: all .3s;
+}
+
+.hamb_close:hover i{
+    color: #ff4545;
+    transition: all .3s;
 }
 
 .hamb:hover{
@@ -404,6 +433,20 @@ img{
     margin: 0 auto;
 }
 
+/* OVERLINE */
+
+.overlyne{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .2);
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+}
+
 /* AU CLICK SUR HAMB */
 
 .sidebare.visible{
@@ -423,6 +466,12 @@ img{
 .sidebare.visible .rows_nav .name_link{
     display: block;  
 }  
+
+.overlyne.visible{
+    transition: all .3s ease;
+    opacity: 1;
+    visibility: visible;
+}
 
 
 @media (min-width: 768px){
@@ -454,6 +503,10 @@ img{
 
     .hamb{
        display: none;
+    }
+
+    .hamb_close{
+        display: none;
     }
 
 }
